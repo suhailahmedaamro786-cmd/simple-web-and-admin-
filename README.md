@@ -36,7 +36,7 @@ The Worker embeds its static storefront assets in `src/index.js`. When changing 
 - Customer email/password sign-up, sign-in, sign-out and account profile.
 - Passwords use salted PBKDF2-SHA-256 (310,000 iterations); raw passwords are never stored.
 - Signed HttpOnly Secure SameSite cookie sessions, with a seven-day expiry.
-- Customers can view only their own order history. Orders placed while signed in are linked to that customer; guest checkout remains available.
+- Customers can view only their own order history. Checkout requires a customer session; placed orders are linked to that customer.
 - Basic per-email failed-login throttling. Email verification and password reset are not configured because no email delivery provider is connected.
 
 
