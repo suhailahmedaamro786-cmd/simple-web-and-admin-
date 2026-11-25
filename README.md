@@ -38,3 +38,14 @@ The Worker embeds its static storefront assets in `src/index.js`. When changing 
 - Signed HttpOnly Secure SameSite cookie sessions, with a seven-day expiry.
 - Customers can view only their own order history. Orders placed while signed in are linked to that customer; guest checkout remains available.
 - Basic per-email failed-login throttling. Email verification and password reset are not configured because no email delivery provider is connected.
+
+
+## Phase 3: product discovery
+- Premium product cards with category labels, sale-price comparison and discount badges.
+- Live search across product name, description, SKU and category.
+- Category, price-range, sorting and inventory-mode filters.
+- Product quick-view with image, description, SKU, category, price and availability.
+- Persistent browser cart across page refreshes, quantity controls and cart totals.
+- Public product data continues to load from D1; no fake catalogue items are inserted.
+
+Inventory note: a stock value of `0` currently means untracked/unlimited inventory (not out of stock), matching the existing order API. Positive values are tracked and decremented on successful orders.
