@@ -67,3 +67,28 @@ footer .brand{color:#fff}footer .brand span{color:#8fd2a5}footer p{color:#b7cbbd
 
 /* Customer-first access and responsive navigation */
 body.auth-required{overflow:hidden}body.auth-required>.topbar,body.auth-required>.header,body.auth-required>main,body.auth-required>footer{visibility:hidden;pointer-events:none}body.auth-required #account-modal{display:flex!important;visibility:visible!important;pointer-events:auto!important;z-index:10000}body.auth-required #account-close{display:none}.main-nav{display:flex;align-items:center;gap:clamp(12px,2vw,28px)}.main-nav a{white-space:nowrap}.main-nav #orders-open{font-weight:600}.account-button{white-space:nowrap}@media(max-width:640px){.header{gap:8px}.main-nav{gap:10px;flex-wrap:wrap;justify-content:flex-end}.main-nav a{font-size:12px}.main-nav .account-button{font-size:12px;padding:9px 11px}.header>.brand{font-size:18px}}
+
+/* AUTH EXPERIENCE — premium, animated and accessible */
+#account-modal{background:radial-gradient(ellipse at 15% 10%,#0b7549d9,#071d15ed 68%);backdrop-filter:blur(12px);animation:authBackdrop .35s ease both}
+.account-card{position:relative;width:min(465px,100%);padding:clamp(24px,5vw,38px);border:1px solid #ffffffa8;border-radius:24px;background:linear-gradient(145deg,#fff 0%,#f8fcf8 100%);box-shadow:0 30px 100px #00190f66;animation:authCardIn .55s cubic-bezier(.2,.8,.2,1) both}
+.account-card:before{content:"";position:absolute;inset:0 0 auto;height:5px;border-radius:24px 24px 0 0;background:linear-gradient(90deg,#075b36,#21a66a,#a7dfb8)}
+.account-card .drawer-head{margin-bottom:20px}.account-card .eyebrow{display:inline-block;color:#087443;font-size:10px;letter-spacing:2.4px;font-weight:900}
+.account-card #account-title{font-size:30px;letter-spacing:-1.2px;margin:9px 0 0;color:#123b28}
+.account-tabs{padding:5px;background:#edf5ef;border:1px solid #e2eee5;border-radius:13px;gap:5px;margin:18px 0 23px}
+.account-tab{border:0;background:transparent;border-radius:9px;padding:12px 10px;font-size:13px;transition:background .22s,color .22s,transform .22s}
+.account-tab:hover{transform:translateY(-1px)}.account-tab.active{background:linear-gradient(135deg,#087443,#075b36);box-shadow:0 6px 16px #08744330}
+.account-card form label{font-size:12px;color:#3f5d49;gap:8px;margin-bottom:16px}
+.account-card form input{border:1px solid #dce9df;border-radius:11px;background:#fff;padding:14px 15px;font-size:14px;transition:border .2s,box-shadow .2s,transform .2s}
+.account-card form input:focus{outline:0;border-color:#3b9a65;box-shadow:0 0 0 4px #08744315;transform:translateY(-1px)}
+.account-card form .primary{width:100%;min-height:49px;border-radius:11px;background:linear-gradient(110deg,#075b36,#0b8950);box-shadow:0 10px 22px #08744328;font-size:13px;letter-spacing:.2px;transition:transform .2s,box-shadow .2s,filter .2s}
+.account-card form .primary:hover{filter:brightness(1.06);transform:translateY(-2px);box-shadow:0 14px 26px #08744338}
+.account-card form .primary:disabled{opacity:.65;cursor:wait;transform:none}
+#account-message{min-height:20px;margin:12px 0 5px;color:#087443;font-weight:600}
+.account-card .payment-note{margin:8px 0 0;background:#eff7f0;color:#607a68;border:1px solid #e1eee3;border-radius:10px;padding:11px 12px;font-size:10px}
+.account-card #account-profile{animation:authCardIn .35s ease both}
+.account-profile-head{background:linear-gradient(120deg,#eaf6ed,#f5faf6);border:1px solid #deeee2;padding:17px}
+.account-avatar{width:54px;height:54px;background:linear-gradient(135deg,#087443,#0c9a5a);box-shadow:0 7px 17px #08744330}
+.account-logout{border-radius:11px;transition:background .2s,border .2s}.account-logout:hover{background:#fff5f3;border-color:#f0d6d1}
+@keyframes authBackdrop{from{opacity:0}to{opacity:1}}@keyframes authCardIn{from{opacity:0;transform:translateY(18px) scale(.985)}to{opacity:1;transform:translateY(0) scale(1)}}
+@media(max-width:520px){.account-card{padding:25px 20px;border-radius:20px}.account-card #account-title{font-size:27px}.account-card form input{padding:13px}.account-tabs{margin:15px 0 20px}}
+@media(prefers-reduced-motion:reduce){#account-modal,.account-card,#account-profile{animation:none!important;transition:none!important}}
