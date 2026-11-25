@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101827"><meta name="description" content="Discover our featured product and order online.">
+  <title>SK Product Store</title><link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="site-header"><a class="brand" href="/">SK<span>STORE</span></a><a class="admin-link" href="/admin.html">Admin</a></header>
+  <main>
+    <section class="hero">
+      <div class="hero-copy"><p class="eyebrow">FEATURED PRODUCT</p><h1>Simple things.<br><span>Better everyday.</span></h1><p class="muted">A carefully selected product, delivered to your doorstep.</p><a class="button button-dark" href="#order">Order now <span>↗</span></a></div>
+      <div class="product-card"><div class="product-image-wrap"><img id="product-image" src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=1000" alt="Featured product"></div><div class="product-info"><div><p class="eyebrow">OUR PICK</p><h2 id="product-name">Everyday Essential Product</h2></div><strong id="product-price">Rs. 2,499</strong></div><p class="product-description" id="product-description">A simple sample product. Update the details from your admin dashboard.</p></div>
+    </section>
+    <section class="order-section" id="order"><div><p class="eyebrow">PLACE YOUR ORDER</p><h2>Ready to make it yours?</h2><p class="muted">Fill in your details. Our team will contact you to confirm your order.</p></div>
+      <form id="order-form" class="form-card"><div class="form-grid"><label>Full name<input name="name" required minlength="2" placeholder="Your name"></label><label>Phone number<input name="phone" required placeholder="03XX XXXXXXX"></label><label>Email (optional)<input name="email" type="email" placeholder="you@example.com"></label><label>Quantity<input name="quantity" type="number" min="1" max="20" value="1" required></label><label class="full">Delivery address<textarea name="address" required minlength="5" rows="3" placeholder="House, street, city"></textarea></label><label class="full">Note (optional)<textarea name="note" rows="2" placeholder="Any special instructions"></textarea></label></div><button class="button button-dark full" type="submit">Submit order <span>→</span></button><p class="form-message" id="form-message" role="status"></p></form>
+    </section>
+  </main>
+  <footer><span>© <span id="year"></span> SK Store</span><span>Built with care by SK Dev Team</span></footer>
+  <script src="/store.js"></script>
+</body></html>
