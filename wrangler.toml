@@ -10,5 +10,5 @@ run_worker_first = ["/api/*"]
 [[d1_databases]]
 binding = "DB"
 database_name = "sk-product-store-db"
-database_id = "REPLACE_WITH_D1_DATABASE_ID"
+database_id = "9c8d1b3a-c636-4082-9197-ca1e7699e07c"
 migrations_dir = "migrations"
