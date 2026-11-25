@@ -55,3 +55,14 @@ Inventory note: a stock value of `0` currently means untracked/unlimited invento
 - Checkout now requires a valid customer session in both the storefront and the Worker API.
 - Unauthenticated customers are directed to sign in or create an account before checkout.
 - Signed-in customer name and email are prefilled from their account, and orders are linked to the authenticated customer ID.
+
+
+## Phase 4: advanced checkout and payments
+- Customer-owned saved delivery addresses with recipient, phone, street, city, province and postal code.
+- Pakistan province/region selection and city field at checkout.
+- Server-side quote and order totals from live D1 product prices; client-submitted prices and totals are ignored.
+- Configurable flat delivery charge and free-delivery threshold.
+- Coupon codes support percentage or fixed discounts, minimum order, maximum discount, date windows and usage limits.
+- Manual JazzCash, Easypaisa and bank transfer instructions are configurable in the admin dashboard; payment references are stored with orders.
+- Admin can independently update order fulfilment status and payment verification status (Pending, Verified, Rejected, Refunded).
+- No online payment gateway is connected; manual payments remain Pending until an admin verifies them.
