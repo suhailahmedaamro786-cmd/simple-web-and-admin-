@@ -41,8 +41,8 @@ function secureCookie(value, maxAge) {
   return `${COOKIE}=${encodeURIComponent(value)}; HttpOnly; Secure; SameSite=Strict; Path=/; Max-Age=${maxAge}`;
 }
 async function seed(env) {
-  await env.DB.prepare("INSERT OR IGNORE INTO products (id,name,price,description,image_url) VALUES (1,?,?,?,?)")
-    .bind("Everyday Essential Product", 2499, "A simple sample product. Update the details from your admin dashboard.", "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=1000").run();
+  await env.DB.prepare("INSERT OR IGNORE INTO products (id,name,slug,price,description,image_url,stock,is_active) VALUES (1,?,?,?,?,?,0,1)")
+    .bind("Everyday Essential Product", "everyday-essential-product", 2499, "A simple sample product. Update the details from your admin dashboard.", "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=1000").run();
 }
 async function handleApi(request, env) {
   const url = new URL(request.url);
