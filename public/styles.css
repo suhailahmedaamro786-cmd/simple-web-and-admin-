@@ -63,3 +63,7 @@ footer .brand{color:#fff}footer .brand span{color:#8fd2a5}footer p{color:#b7cbbd
 /* NAVBAR CLEANUP — customer-first navigation */
 @media(max-width:640px){.header{gap:8px}.header nav{display:flex!important;align-items:center;gap:10px;white-space:nowrap}.header nav a{font-size:10px}.account-button{padding:8px 9px;font-size:10px}.cart-button{padding:8px 9px;font-size:10px}.brand{font-size:18px;white-space:nowrap}}
 @media(max-width:380px){.header{padding:0 10px;gap:6px}.header nav{gap:7px}.header nav a{font-size:9px}.account-button{padding:7px;font-size:9px}.cart-button{padding:7px;font-size:9px}.brand{font-size:16px}}
+
+
+/* Customer-first access and responsive navigation */
+body.auth-required{overflow:hidden}body.auth-required>.topbar,body.auth-required>.header,body.auth-required>main,body.auth-required>footer{visibility:hidden;pointer-events:none}body.auth-required #account-modal{display:flex!important;visibility:visible!important;pointer-events:auto!important;z-index:10000}body.auth-required #account-close{display:none}.main-nav{display:flex;align-items:center;gap:clamp(12px,2vw,28px)}.main-nav a{white-space:nowrap}.main-nav #orders-open{font-weight:600}.account-button{white-space:nowrap}@media(max-width:640px){.header{gap:8px}.main-nav{gap:10px;flex-wrap:wrap;justify-content:flex-end}.main-nav a{font-size:12px}.main-nav .account-button{font-size:12px;padding:9px 11px}.header>.brand{font-size:18px}}
