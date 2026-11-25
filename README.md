@@ -49,3 +49,9 @@ The Worker embeds its static storefront assets in `src/index.js`. When changing 
 - Public product data continues to load from D1; no fake catalogue items are inserted.
 
 Inventory note: a stock value of `0` currently means untracked/unlimited inventory (not out of stock), matching the existing order API. Positive values are tracked and decremented on successful orders.
+
+
+## Checkout account requirement
+- Checkout now requires a valid customer session in both the storefront and the Worker API.
+- Unauthenticated customers are directed to sign in or create an account before checkout.
+- Signed-in customer name and email are prefilled from their account, and orders are linked to the authenticated customer ID.
